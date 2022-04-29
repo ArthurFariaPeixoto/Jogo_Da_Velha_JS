@@ -5,6 +5,10 @@ var vencedorFinal = document.getElementById('vencedor');
 alternaJogador('X');
 
 function quadradoEscolhido(id){
+    if(vencedor !== null){
+        return;
+    }
+
     var campo = document.getElementById(id);
 
     if(campo.innerHTML !== '-'){
@@ -82,7 +86,6 @@ function evencedor(){
     }
 }
 
-
 function sequencia(campo1, campo2, campo3){
     var igual = false;
 
@@ -91,7 +94,6 @@ function sequencia(campo1, campo2, campo3){
     }
     return igual;
 }
-
 
 function mudaCor(campo1, campo2, campo3){
     campo1.style.color = '#004100';
@@ -102,8 +104,21 @@ function mudaCor(campo1, campo2, campo3){
     campo3.style.background = '#009400';
 }
 
-
 function mudaVencedor(campo){
     vencedor = campo.innerHTML;
     vencedorFinal.innerHTML = vencedor;
+}
+
+function reiniciar(){
+    vencedor = null;
+    jogador=null;
+
+    for(var i=1; i<=9; i++){
+        var campo = document.getElementById(i);
+        campo.style.background = '#373737';
+        campo.style.color = '#373737';
+        campo.innerHTML = '-';
+    }
+
+    alternaJogador('X');
 }
