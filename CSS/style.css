@@ -1,0 +1,41 @@
+:root{
+    --background_color: rgb(50,50,50);
+    --background: rgb(55,55,55);
+}
+
+*{
+    background-color: var(--background_color);
+    color: white;
+}
+
+body{
+    text-align: center;
+}
+
+.painel{
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    background: var(--background);
+    display: inline-block;
+    padding: 50px;
+    font-size: 60px;
+    margin: 5px;
+    cursor: pointer;
+    color: var(--background);
+}
+
+.jogador, .vencedor{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.reiniciar{
+    text-align: center;
+    margin-top: 10px;
+    width: 100px;
+    height: 40px;
+    background: var(--background);
+    cursor: pointer;
+}
