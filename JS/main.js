@@ -112,6 +112,7 @@ function mudaVencedor(campo){
 function reiniciar(){
     vencedor = null;
     jogador=null;
+    vencedorFinal.innerHTML = '';
 
     for(var i=1; i<=9; i++){
         var campo = document.getElementById(i);

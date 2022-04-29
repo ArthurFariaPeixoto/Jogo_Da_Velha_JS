@@ -1,6 +1,7 @@
 :root{
     --background_color: rgb(50,50,50);
     --background: rgb(55,55,55);
+    --gray: gray;
 }
 
 *{
@@ -32,10 +33,18 @@ body{
 }
 
 .reiniciar{
-    text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
     width: 100px;
     height: 40px;
     background: var(--background);
     cursor: pointer;
+    transition: all .5s;
+    border: 10px solid transparent;
+}
+.reiniciar:hover{
+    width: 120px;
+    height: 60px;
+    background: var(--gray);
+    border: 10px solid var(--gray);
+    border-radius: 5%;
 }
